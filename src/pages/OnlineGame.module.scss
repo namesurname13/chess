@@ -1,0 +1,138 @@
+// Переменные
+$online-game-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+$container-bg: rgba(255, 255, 255, 0.95);
+$title-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+$border-radius: 20px;
+$box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+// Миксины
+@mixin page-layout {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+@mixin container-style {
+  background: $container-bg;
+  backdrop-filter: blur(10px);
+  border-radius: $border-radius;
+  padding: 40px;
+  box-shadow: $box-shadow;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Основные стили
+.onlineGame {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.onlineGameContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.onlineGameTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.onlineGameContent {
+  margin-bottom: 30px;
+}
+
+.onlineGameButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.onlineGameButton {
+  width: 100%;
+}
+
+.friendGameSection {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+
+  h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.friendGameInput {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.gameIdInput {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #667eea;
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.backButton {
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .onlineGameContainer {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .friendGameInput {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gameIdInput {
+    width: 100%;
+  }
+}

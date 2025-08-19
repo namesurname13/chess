@@ -1,0 +1,95 @@
+.gameRoom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statusInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.connectionStatus {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gameStatus {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.gameResult {
+  font-size: 18px;
+  font-weight: 700;
+  color: #28a745;
+  text-align: center;
+  padding: 10px;
+  background: #d4edda;
+  border-radius: 4px;
+  border: 1px solid #c3e6cb;
+}
+
+.playerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.opponent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+
+  span {
+    color: #666;
+  }
+}
+
+.playerColor {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.gameBoard {
+  display: flex;
+  justify-content: center;
+}
+
+.gameControls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .gameHeader {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .playerInfo {
+    text-align: center;
+  }
+}
